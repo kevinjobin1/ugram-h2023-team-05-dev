@@ -1,0 +1,12 @@
+version: '3.9'
+services:
+  ugram-backend:
+    container_name: ugram-backend
+    image: "team05/ugram-backend:latest"
+    ports:
+      - 80:80
+  ugram-frontend:
+    container_name: ugram-frontend
+    image: "team05/ugram-frontend:latest"
+    ports:
+      - 4173:4173

@@ -1,0 +1,12 @@
+**/dist
+**/node_modules
+.editorconfig
+.prettierrc*
+.eslintrc*
+.vscode
+*.log
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+.git
+.gitignore

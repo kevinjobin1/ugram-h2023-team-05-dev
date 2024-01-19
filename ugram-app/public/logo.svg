@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+  <rect style="fill: rgba(255, 255, 255, 0);paint-order: stroke; stroke-width: 20px; stroke: currentColor" x="21.016" y="13.453" width="470.294" height="469.466" rx="80" ry="80"/>
+  <ellipse style="fill: rgba(255, 255, 255, 0); paint-order: stroke; stroke-width: 23px; stroke: currentColor" cx="254.953" cy="261.504" rx="115.237" ry="111.874"/>
+  <ellipse style="fill: currentColor; stroke-width: 1px; stroke: currentColor" cx="394.298" cy="93.794" rx="36.609" ry="34.96"/>
+  <path d="M 79.864 102.454 L 82.618 102.454 L 82.618 109.842 Q 82.618 111.601 82.72 112.122 Q 82.897 112.959 83.562 113.466 Q 84.228 113.974 85.381 113.974 Q 86.554 113.974 87.149 113.494 Q 87.745 113.015 87.866 112.317 Q 87.987 111.619 87.987 110 L 87.987 102.454 L 90.741 102.454 L 90.741 109.619 Q 90.741 112.075 90.518 113.09 Q 90.294 114.104 89.694 114.802 Q 89.094 115.5 88.089 115.914 Q 87.084 116.328 85.465 116.328 Q 83.511 116.328 82.502 115.876 Q 81.492 115.425 80.906 114.704 Q 80.32 113.983 80.134 113.192 Q 79.864 112.02 79.864 109.731 Z" 
+  transform="matrix(7.456781, 0, 0, 7.189385, -501.818481, -725.959229)" 
+  style="stroke: currentColor; stroke-width: 1.2px; white-space: pre;"/>
+</svg>

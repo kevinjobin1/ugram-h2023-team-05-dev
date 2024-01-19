@@ -1,0 +1,33 @@
+name: Backend CI
+
+on:
+  # Run on main et dev push and pull request
+  # Run only if files modified are not docs
+  push:
+    branches: [main, dev]
+    paths: [nest-app/**]
+  pull_request:
+    branches: [main, dev]
+    paths: [nest-app/**]
+defaults:
+  run:
+    # Set working directory to ugram-app
+    working-directory: nest-app
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # Checkout code
+      - name: Checking out code
+        uses: actions/checkout@v3
+      # Install Node.js
+      - name: Installing Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      # Install dependencies and build project
+      - name: Install dependencies
+        run: npm install
+      # Build application
+      - name: Build application
+        run: npm run build

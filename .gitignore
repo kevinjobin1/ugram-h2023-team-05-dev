@@ -1,0 +1,114 @@
+# compiled output
+*/node_modules
+*/dist
+*/data
+*/.cache
+
+# Logs
+*/logs
+*/*.log
+*/npm-debug.log*
+*/pnpm-debug.log*
+*/yarn-debug.log*
+*/yarn-error.log*
+*/lerna-debug.log*
+
+# OS
+.DS_Store
+
+# Tests
+/coverage
+/.nyc_output
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+.vscode/*
+# Uncomment to include your local settings
+# !.vscode/settings.json
+# !.vscode/tasks.json
+# !.vscode/launch.json
+# !.vscode/extensions.json
+
+# Environment files
+**/*.env
+**/.env.*.local
+!**/.env.example
+!/nest-app/example.env
+
+# AWS Elastic Beanstalk Files
+*/.elasticbeanstalk
+*/.elasticbeanstalk/*
+*/.elasticbeanstalk/*.global.yml
+!*/.elasticbeanstalk/*.cfg.yml
+
+# Ignore .zip deployments
+**/.zip
+
+
+# compiled output
+*/dist
+*/node_modules
+
+# data and cache
+data
+data/*
+**/data/*
+**/data
+*/.cache
+*/.data
+*/data
+
+# Logs
+*/logs
+*/*.log
+*/npm-debug.log*
+*/pnpm-debug.log*
+*/yarn-debug.log*
+*/yarn-error.log*
+*/lerna-debug.log*
+
+# OS
+.DS_Store
+
+# Tests
+coverage
+.nyc_output
+
+# IDEs and editors
+*/.idea
+*/.project
+*/.classpath
+*/.c9/
+*/*.launch
+*/.settings/
+*/*.sublime-workspace
+
+# IDE - VSCode
+.vscode
+.vscode/*
+# Uncomment if you want to include your local settings (autosave, etc.)
+# !.vscode/settings.json
+# !.vscode/tasks.json
+# !.vscode/launch.json
+# !.vscode/extensions.json
+
+# Environment files
+*/.config/
+**/*.env
+!**/example.env
+
+# Elastic Beanstalk Files
+*/.elasticbeanstalk
+*/.elasticbeanstalk/*
+*/!.elasticbeanstalk/*.cfg.yml
+*/!.elasticbeanstalk/*.global.yml
+
+

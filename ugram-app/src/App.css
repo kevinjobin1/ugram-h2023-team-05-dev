@@ -1,0 +1,23 @@
+#root {
+  text-align: center;
+  all: unset;
+}
+
+.App {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.waves-bg {
+  background-image: url('/waves-bg.svg');
+  background-size: cover;
+  background-position: center;
+}
+
+.animated-gradient-bg {
+  background: var(--gradient);
+  background-size: 200% 200%;
+  animation: moving 15s ease infinite;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.4);
+}

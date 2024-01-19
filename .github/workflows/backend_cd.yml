@@ -1,0 +1,58 @@
+name: Backend CD
+
+on: workflow_dispatch
+#  workflow_run:
+#   workflows: ["Backend CI"]
+#    types:
+#     - completed
+defaults:
+  run:
+    working-directory: nest-app
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Latest Repo
+        uses: actions/checkout@v3
+
+      - name: Login to docker hub
+        uses: actions-hub/docker/login@master
+        env:
+          DOCKER_USERNAME: team05
+          DOCKER_PASSWORD: ${{ secrets.DOCKER_HUB_SECRET_TOKEN }}
+
+      - name: Build :latest
+        run: docker build -t team05/ugram-backend .
+
+      - name: Push to docker hub :latest
+        uses: actions-hub/docker@master
+        with:
+          args: push team05/ugram-backend
+
+      - name: Get Timestamp
+        uses: gerred/actions/current-time@master
+        id: current-time
+
+      - name: Run String Replace
+        uses: frabert/replace-string-action@master
+        id: format-time
+        with:
+          pattern: '[:\.]+'
+          string: "${{ steps.current-time.outputs.time }}"
+          replace-with: "-"
+          flags: "g"
+
+      - name: Generate Deployment Package
+        run: zip -r deploy.zip * -x "**node_modules**" -x "**dist**"
+
+      - name: Deploy to EB
+        uses: einaregilsson/beanstalk-deploy@v16
+        with:
+          aws_access_key: ${{ secrets.AWS_ACCESS_KEY }}
+          aws_secret_key: ${{ secrets.AWS_SECRET_KEY }}
+          application_name: ugram-backend
+          environment_name: ugram-backend-dev
+          version_label: "docker-app-${{ steps.format-time.outputs.replaced }}"
+          region: us-east-1
+          deployment_package: nest-app/deploy.zip
